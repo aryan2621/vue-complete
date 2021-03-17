@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Rishabh",
+      "body": "rISHBAH Verma",
+      "tags": ["wedding", "coding", "mern stach"]
+    },
+    {
+      "id": 2,
+      "title": "Rishabh vermaaaa",
+      "body": " kunarc  Verma",
+      "tags": ["stup", "wedding", "coding", "mern stach"]
+    }
+  ]
+}

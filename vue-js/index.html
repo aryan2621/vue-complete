@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <title>Vue App </title>
+
+    <style>
+        /* .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        } */
+
+
+
+        body {
+            background: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
+        p,
+        h3,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+            background: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        li.fav {
+            background: #ff9ad2;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Vue js : )</h1>
+        <div v-if="showBooks">
+            {{age}}
+        </div>
+        <button @click="toogleShowBooks"><span v-if="!showBooks">Show Books</span>
+            <span v-else>Hide Books</span>
+        </button>
+        <div v-show="showBooks">
+            hiiiiii
+        </div>
+        <!-- Mouse evenets
+         -->
+
+        <div class="box" @mouseover="handleOver">Over</div>
+        <div class="box" @mouseleave="handleLeave">Leave</div>
+        <div class="box" @dblclick="dbclicks">DB</div>
+        <div class="box" @mousemove="handleMove">{{x}}-{{y}}</div>
+        <!-- books and for loop -->
+
+        <ul>
+            <li v-for="item in filteredBooks" v-bind:class="{fav:item.isfav}" @click="handleToggle(item)">
+                <h3>{{item.head}}</h3>
+                <h3>{{item.writer}}</h3>
+            </li>
+        </ul>
+        <a :href="url">Hiiiiii</a>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
